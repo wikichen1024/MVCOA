@@ -18,6 +18,7 @@ namespace BLLA
             SetDAL();
         }
 
+		//git summary
        
         /// <summary>
         /// 由子类实现，为 业务父类 里的 数据接口对象 设置 值！
