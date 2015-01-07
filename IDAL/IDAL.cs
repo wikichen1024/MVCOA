@@ -12,6 +12,8 @@ namespace IDAL
     {
     }
 
+    //woyehehe
+
 	public partial interface IOu_DepartmentDAL : IBaseDAL<MODEL.Ou_Department>
     {
     }
