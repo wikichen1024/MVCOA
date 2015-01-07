@@ -13,7 +13,7 @@ namespace IDAL
     }
 
     //woyehehe
-
+    //gitbranch
 	public partial interface IOu_DepartmentDAL : IBaseDAL<MODEL.Ou_Department>
     {
     }
