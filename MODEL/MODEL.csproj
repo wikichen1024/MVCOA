@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36B00C5E-B991-4F06-8733-7BF1121E8D3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MODEL</RootNamespace>
+    <AssemblyName>MODEL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill_Leave.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OuOa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OuOa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OuOa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OuOa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OuOa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_Department.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_Permission.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_Role.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_RolePermission.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_UserInfo.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_UserRole.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ou_UserVipPermission.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WF_AutoTransactNode.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_BillFlowNode.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_BillFlowNodeRemark.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_BillState.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_Node.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_NodeState.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_WorkFlow.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_WorkFlowNode.cs">
+      <DependentUpon>OuOa.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOModel\" />
+    <Folder Include="FormatModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="OuOa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OuOa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OuOa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OuOa.edmx</DependentUpon>
+      <LastGenOutput>OuOa.Context.cs</LastGenOutput>
+    </None>
+    <None Include="OuOa.edmx.diagram">
+      <DependentUpon>OuOa.edmx</DependentUpon>
+    </None>
+    <None Include="OuOa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OuOa.edmx</DependentUpon>
+      <LastGenOutput>OuOa.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
